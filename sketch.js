@@ -1,11 +1,14 @@
+//Text color
 let textColorR = 0;
 let textColorG = 0;
 let textColorB = 0;
 
+//Clock color
 let clockColorR = 255;
 let clockColorG = 255;
 let clockColorB = 255;
 
+//Background color
 let backgroundColorR = 255;
 let backgroundColorG = 255;
 let backgroundColorB = 255;
@@ -68,14 +71,15 @@ function draw() {
     textColorG = 94;
     textColorB = 55;
   }
-
+  
+  //Clock
   fill(clockColorR,clockColorG,clockColorB);
   noStroke();
   ellipse(0, 0, 500, 500);
   textAlign(CENTER);
   textSize(48);
 
-  // Display season text
+  // Display season text when mouse is pressed
   if(mouseIsPressed == true){
   textSize(50);
   fill(textColorR, textColorG, textColorB);
@@ -117,6 +121,7 @@ function draw() {
 function getSeason() {
   let mos = month(); // Get the current month
 
+  //Checking the seasons of the year
   if (mos >= 3 && mos <= 5) {
     return 'spring';
   } else if (mos >= 6 && mos <= 8) {
