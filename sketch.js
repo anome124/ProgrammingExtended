@@ -11,14 +11,14 @@ let backgroundColorG = 255;
 let backgroundColorB = 255;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight); // This is so that the canvas is full screen
-  angleMode(DEGREES); // I want my entire code to be working with 360 degrees instead of pi
+  createCanvas(windowWidth, windowHeight);
+  angleMode(DEGREES);
 }
 
 function draw() {
   background(backgroundColorR,backgroundColorG,backgroundColorB);
 
-  translate(windowWidth / 2, windowHeight / 2); // It repositions the 0,0 of the canvas to the middle of my screen
+  translate(windowWidth / 2, windowHeight / 2);
 
   let hr = hour();
   let mn = minute();
